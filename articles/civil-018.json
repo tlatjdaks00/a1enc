@@ -1,0 +1,16 @@
+{
+  "context": {
+    "title": "LIG넥스원 김천 체계작업장 신축공사",
+    "cover": "articles/civil-018.jpg",
+    "date": "2025-12-01T07:40:00.000Z",
+    "finished": "2025.12 ~",
+    "client": "LIG넥스원",
+    "scale": "토목 :  2500㎡(758py)/건축: 1400㎡(426py)",
+    "info": "토목, 건축 공사",
+    "displayDate": "2025년",
+    "workphotos": [
+      "articles/civil-018.jpg"
+    ]
+  },
+  "content": "\n\n1. 공 사 명: title\n1. 발 주 처:\tclient \n1. 공사기간:\tfinished\n1. 공사규모:\tscale\n1. 공사내용: info\n"
+}

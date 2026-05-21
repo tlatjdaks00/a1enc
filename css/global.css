@@ -1,0 +1,160 @@
+@charset "UTF-8";
+
+/* reset */
+html, body, p, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, p, table, th, td, form, fieldset, legend, input, textarea, button, select {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Noto Sans KR", "Malgun Gothic", "굴림", Gulim, "돋움", Dotum, Helvetica, sans-serif;
+  color: #666;
+  font-weight: 400;
+  line-height: 1;
+  -webkit-text-size-adjust: none;
+  word-break: keep-all;
+}
+
+html, body {
+  font-size: 16px;
+  line-height: 1.25rem;
+}
+
+h1, h2, h3, h4, h5, h6, strong {
+  font-weight: 600;
+  font-size: 100%;
+  line-height: 1;
+}
+
+select, button, input, textarea, pre {
+  font-family: "Noto Sans KR", "Malgun Gothic", "굴림", Gulim, "돋움", Dotum, Helvetica, sans-serif;
+  font-size: 16px;
+  color: #666;
+}
+
+pre {
+  white-space: pre-wrap;
+}
+
+fieldset, img, button {
+  border: 0;
+}
+
+img, input, button {
+  vertical-align: top;
+}
+
+table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  word-break: break-all;
+  word-wrap: break-word;
+}
+
+address, em {
+  font-style: normal;
+}
+
+ol, ul, li {
+  list-style: none;
+}
+
+hr {
+  display: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a:hover, a:active {
+  text-decoration: none;
+}
+
+legend {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+}
+
+caption {
+  overflow: hidden;
+  width: 0;
+  height: 0;
+  font-size: 0;
+  line-height: 0;
+}
+
+button {
+  background: none;
+  cursor: pointer;
+  -webkit-apperance: none;
+}
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+textarea {
+  resize: none;
+}
+
+:focus {
+  outline: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+select {
+  border-radius: 0;
+  background: url("../images/common/blt_select.svg") right 12px center no-repeat;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+select::-ms-expand {
+  display: none;
+}
+select:focus {
+  border: 1px solid #1c1c1c;
+}
+
+/* select arrow none */
+input[type=text], input[type=password], input[type=number], input[type=tel], input[type=email], input[type=button], input[type=submit] {
+  border-radius: 0 !important;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: #fff 5000s ease-in-out 0s;
+  box-shadow: 0 0 0px 1000px #fff inset !important;
+}
+
+textarea {
+  border-radius: 0 !important;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+input::placeholder, textarea::placeholder {
+  color: #999;
+}
+
+.disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  pointer-events: none;
+}

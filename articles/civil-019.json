@@ -1,0 +1,16 @@
+{
+  "context": {
+    "title": "인터지스(주) 김천 아주스틸 물류창고 신축공사",
+    "cover": "articles/civil-019.jpg",
+    "date": "2026-04-01T07:40:00.000Z",
+    "finished": "2026.04 ~ 2026.11",
+    "client": "아주스틸",
+    "scale": "토목 :  2500㎡(758py)/건축: 1400㎡(426py)",
+    "info": "토목, 건축 공사",
+    "displayDate": "2026년",
+    "workphotos": [
+      "articles/civil-019.jpg"
+    ]
+  },
+  "content": "\n\n1. 공 사 명: title\n1. 발 주 처:\tclient \n1. 공사기간:\tfinished\n1. 공사규모:\tscale\n1. 공사내용: info\n"
+}

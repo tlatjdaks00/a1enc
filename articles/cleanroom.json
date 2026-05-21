@@ -1,0 +1,135 @@
+[
+  {
+    "title": "상상바이오 화순공장 클린룸 공사",
+    "cover": "articles/cleanroom-010/003.jpg",
+    "date": "2026-06-01T07:40:00.000Z",
+    "finished": "2026.01 ~ 2026.02",
+    "filename": "cleanroom-011.json"
+  },
+  {
+    "title": "상상바이오 당진공장 클린룸 공사",
+    "cover": "articles/cleanroom-010/001.jpg",
+    "date": "2025-03-01T07:40:00.000Z",
+    "finished": "2024.12 ~ 2025.03",
+    "filename": "cleanroom-010.json"
+  },
+  {
+    "title": "파주 ASE KOREA PB2 Fit-up Design Work 건축공사",
+    "cover": "articles/cleanroom-020.jpg",
+    "date": "2024-06-01T07:40:00.000Z",
+    "finished": "2024.01 ~ 2024.06",
+    "filename": "cleanroom-020.json"
+  },
+  {
+    "title": "구미4공장 1F Actuator 자재실 구성 공사",
+    "cover": "articles/cleanroom-019.jpg",
+    "date": "2023-12-01T07:40:00.000Z",
+    "finished": "2023.10 ~ 2023.12",
+    "filename": "cleanroom-019.json"
+  },
+  {
+    "title": "구미2공장 B동(C5)VaroAcutatorBuil대응공사",
+    "cover": "articles/cleanroom-018.jpg",
+    "date": "2023-05-03T07:40:00.000Z",
+    "finished": "2023.03 ~ 2023.05",
+    "filename": "cleanroom-018.json"
+  },
+  {
+    "title": "구미2공장 B동(C5)100ZONE 및 SMT구역건축공사",
+    "cover": "articles/cleanroom-017.jpg",
+    "date": "2023-05-01T07:40:00.000Z",
+    "finished": "2023.03 ~ 2023.05",
+    "filename": "cleanroom-017.json"
+  },
+  {
+    "title": "구미4공장 리모델링 환경개선공사",
+    "cover": "articles/cleanroom-016.jpg",
+    "date": "2022-12-01T07:40:00.000Z",
+    "finished": "2022.05 ~ 2022.12",
+    "filename": "cleanroom-016.json"
+  },
+  {
+    "title": "구미 2,3공장 TS Capa Up Clean room 공사",
+    "cover": "articles/cleanroom-004.jpg",
+    "date": "2022-02-01T07:40:00.000Z",
+    "finished": "2021.08 ~ 2022.02",
+    "filename": "cleanroom-004.json"
+  },
+  {
+    "title": "LG이노텍 2공장 B동 C5 Banff FOL 100 ZONE 공사(2차)",
+    "cover": "articles/cleanroom-005.jpg",
+    "date": "2021-05-03T07:40:00.000Z",
+    "finished": "2021.03 ~ 2021.05",
+    "filename": "cleanroom-005.json"
+  },
+  {
+    "title": "노바엠 헬스케어 클린룸 공사",
+    "cover": "articles/cleanroom-015.jpg",
+    "date": "2021-05-02T07:40:00.000Z",
+    "finished": "2021.02 ~ 2021.08",
+    "filename": "cleanroom-015.json"
+  },
+  {
+    "title": "LGIT_P6 PKG 증설공사 중 클린룸 공사",
+    "cover": "articles/cleanroom-008.jpg",
+    "date": "2021-05-01T07:40:00.000Z",
+    "finished": "2021.01 ~ 2021.07",
+    "filename": "cleanroom-008.json"
+  },
+  {
+    "title": "LG이노텍 2공장 B동 C5 Banff FOL 100Zone 공사",
+    "cover": "articles/cleanroom-002.jpg",
+    "date": "2021-02-01T07:40:00.000Z",
+    "finished": "2021.01 ~ 2021.02",
+    "filename": "cleanroom-002.json"
+  },
+  {
+    "title": "LB루셈 2공장 신축공사(C/R건축공사)",
+    "cover": "articles/cleanroom-014.jpg",
+    "date": "2019-09-01T07:40:00.000Z",
+    "finished": "2019.09 ~ 2020.02",
+    "filename": "cleanroom-014.json"
+  },
+  {
+    "title": "LG이노텍 1공장 B동 C/R 확장공사 (건축)",
+    "cover": "articles/cleanroom-007.jpg",
+    "date": "2019-05-01T07:40:00.000Z",
+    "finished": "2019.05 ~ 2019.07",
+    "filename": "cleanroom-007.json"
+  },
+  {
+    "title": "삼성SDI DF동 C/R 확장공사 (건축)",
+    "cover": "articles/cleanroom-006/001.jpg",
+    "date": "2019-03-25T07:40:00.000Z",
+    "finished": "2019년 ~ 2019년",
+    "filename": "cleanroom-006.json"
+  },
+  {
+    "title": "LG디스플레이 P6동 증축 (C/R 건축)",
+    "cover": "articles/cleanroom-009.jpg",
+    "date": "2019-03-25T07:40:00.000Z",
+    "finished": "2019년 ~ 2019년",
+    "filename": "cleanroom-009.json"
+  },
+  {
+    "title": "삼성SDI㈜ 분리막#3 증축 공사",
+    "cover": "articles/cleanroom-001.jpg",
+    "date": "2018-03-20T07:40:00.000Z",
+    "finished": "2018년",
+    "filename": "cleanroom-001.json"
+  },
+  {
+    "title": "삼성SDI QD-PJT",
+    "cover": "articles/cleanroom-013.jpg",
+    "date": "2018-02-25T07:40:00.000Z",
+    "finished": 2018,
+    "filename": "cleanroom-013.json"
+  },
+  {
+    "title": "웅진에너지 대전 공장 C/R 확장공사",
+    "cover": "articles/cleanroom-003.jpg",
+    "date": "2018-01-25T07:40:00.000Z",
+    "finished": "2017.08 ~ 2017.12",
+    "filename": "cleanroom-003.json"
+  }
+]

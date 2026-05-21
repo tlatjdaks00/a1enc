@@ -1,0 +1,15 @@
+{
+  "context": {
+    "title": "2공장 D동 3층 인테리어 공사",
+    "cover": "articles/renovating-010.jpg",
+    "date": "2021-10-25T07:40:00.000Z",
+    "finished": "2021.10 ~ 2022.01",
+    "client": "LG이노텍",
+    "scale": "건축면적 : 395m2(120PY)",
+    "info": "건축 인테리어",
+    "workphotos": [
+      "articles/renovating-010.jpg"
+    ]
+  },
+  "content": "\n\n1. 공 사 명: title\n1. 발 주 처:\tclient \n1. 공사기간:\tfinished\n1. 공사규모:\tscale\n1. 공사내용: info\n"
+}
