@@ -1376,6 +1376,7 @@
   background-color: #004484;
 }
 .tab_list li.on a span {
+  padding: .15rem 0;
   font-weight: 500;
   color: #fff;
 }
