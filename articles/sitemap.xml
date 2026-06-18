@@ -7,6 +7,18 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>http://localhost:3000/civil-022.json</loc>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:3000/civil-021.json</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>http://localhost:3000/cleanroom-011.json</loc>
     <lastmod>2026-06-01</lastmod>
     <changefreq>monthly</changefreq>
