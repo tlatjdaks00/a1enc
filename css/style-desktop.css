@@ -246,8 +246,8 @@
 .desktop #footer {
   width: 100%;
   min-width: 1200px;
-  height: 200px;
-  padding: 50px 160px 0;
+  height: 240px;
+  padding: 45px 160px 0;
   background-color: #004484;
 }
 .desktop #footer .footer_inner {
@@ -265,7 +265,7 @@
 }
 .desktop #footer .footer_inner .footer_info address {
   margin-bottom: 5px;
-  font-size: 16px;
+  font-size: 13px;
   letter-spacing: -0.025em;
   line-height: 1.25rem;
   color: #fff;
@@ -282,7 +282,7 @@
 
 @media all and (max-width: 1400px) {
   .desktop #footer {
-    padding: 50px 60px 0;
+    padding: 45px 60px 0;
   }
   .desktop #footer .footer_inner {
     min-width: 1120px;
@@ -2552,7 +2552,7 @@ label.check.mt {
 }
 @media all and (max-width: 1400px) {
   .desktop #footer {
-    padding: 50px 60px 0;
+    padding: 45px 60px 0;
   }
   .desktop #footer .footer_inner {
     min-width: 1120px;
