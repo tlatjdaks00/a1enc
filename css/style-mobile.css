@@ -1252,7 +1252,8 @@
 .company .licenses_wrap ul li{width:23.5%;  margin-right:2%; margin-bottom:30px;}
 .company .licenses_wrap ul li p{padding:10px; text-align:center; color:#333; font-weight:500; font-size:18px;}
 .company .licenses_wrap ul li:nth-child(4n){margin-right:0;}
-.company .licenses_wrap ul li img{ border:1px solid #ddd; max-width: 100%; min-width: 100%; vertical-align: top; display: inline-block;}
+/*.company .licenses_wrap ul li img{ border:1px solid #ddd; max-width: 100%; min-width: 100%; vertical-align: top; display: inline-block;}*/
+.company .licenses_wrap ul li img{ border:1px solid #ddd; width: 100%; object-fit: cover; aspect-ratio: 28/40; vertical-align: top; display: inline-block;}
 .mobile .company .licenses_wrap {width: 100%; }
 .mobile .company .licenses_wrap ul li{width: 48%; margin-bottom: 10px;}
 .mobile .gallery_list .list {
