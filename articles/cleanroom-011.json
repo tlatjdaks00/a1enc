@@ -1,16 +1,14 @@
 {
   "context": {
-    "title": "상상바이오 화순공장 클린룸 공사",
-    "cover": "articles/cleanroom-010/003.jpg",
+    "title": "명지피엔피 2공장 신축공사 (클린룸 공사)",
+    "cover": "articles/cleanroom-011.jpg",
     "date": "2026-06-01T07:40:00.000Z",
-    "finished": "2026.01 ~ 2026.02",
+    "finished": "2025.07 ~ 2026.01",
     "client": "상상바이오",
-    "scale": "1700㎡(516py)",
+    "scale": "2,145㎡(650py)",
     "info": "C/R 건축",
     "workphotos": [
-      "articles/cleanroom-010/003.jpg",
-      "articles/cleanroom-010/002.jpg",
-      "articles/cleanroom-010/001.jpg"
+      "articles/cleanroom-011.jpg"
     ]
   },
   "content": "\n\n1. 공 사 명: title\n1. 발 주 처:\tclient \n1. 공사기간:\tfinished\n1. 공사규모:\tscale\n1. 공사내용: info\n"
