@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>일반 문의</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+  :root {
+    --bg: #faf9f7;
+    --text: #111111;
+    --muted: #6b6a68;
+    --placeholder: #8a8986;
+    --border: #7a7977;
+    --box-bg: #f3f1ed;
+    --box-border: #e2dfd9;
+    --error: #d4351c;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Pretendard", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .page {
+    width: 100%;
+    max-width: 592px;
+    margin: 0 auto;
+    padding: 120px 0 80px;
+  }
+  h1 {
+    margin: 0 0 48px;
+    font-size: 64px;
+    line-height: 1.15;
+    font-weight: 800;
+    letter-spacing: -0.04em;
+  }
+  .field { margin-bottom: 24px; }
+  label.field-label {
+    display: block;
+    margin-bottom: 11px;
+    font-size: 15px;
+    color: var(--muted);
+  }
+  .input, .textarea {
+    display: block;
+    width: 100%;
+    padding: 0 16px;
+    font: inherit;
+    font-size: 17px;
+    color: var(--text);
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    outline: none;
+    transition: border-color .15s, box-shadow .15s;
+  }
+  .input { height: 55px; }
+  .textarea {
+    height: 199px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    line-height: 1.5;
+    resize: vertical;
+    min-height: 120px;
+  }
+  .input::placeholder, .textarea::placeholder { color: var(--placeholder); }
+  .input:focus, .textarea:focus {
+    border-color: var(--text);
+    box-shadow: 0 0 0 1px var(--text);
+  }
+  .input.invalid, .textarea.invalid {
+    border-color: var(--error);
+    box-shadow: 0 0 0 1px var(--error);
+  }
+
+  /* 파일 첨부 영역 */
+  .file-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    min-height: 96px;
+    padding: 20px 20px 20px 16px;
+    margin-top: 24px;
+    background: var(--box-bg);
+    border: 1px solid var(--box-border);
+    border-radius: 12px;
+    transition: border-color .15s, background .15s;
+  }
+  .file-box.dragover { border-color: var(--text); background: #ece9e3; }
+  .file-info { min-width: 0; flex: 1; }
+  .file-title {
+    margin: 0 0 8px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #55544f;
+  }
+  .file-desc {
+    margin: 0;
+    font-size: 15px;
+    color: var(--muted);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .file-desc .name {
+    color: var(--text);
+    border-bottom: 1px dotted #999;
+    padding-bottom: 1px;
+  }
+  .file-actions { display: flex; gap: 8px; flex-shrink: 0; }
+  .btn-outline {
+    height: 44px;
+    padding: 0 16px;
+    font: inherit;
+    font-size: 15px;
+    color: var(--text);
+    background: var(--bg);
+    border: 1px solid #cfccc6;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: background .15s, border-color .15s;
+  }
+  .btn-outline:hover { background: #fff; border-color: #aaa7a0; }
+  .file-input { display: none; }
+
+  /* 상태별 표시 */
+  .state-attached { display: none; }
+  .file-box.has-file .state-empty { display: none; }
+  .file-box.has-file .state-attached { display: block; }
+  .file-box.has-file .file-title { color: var(--text); }
+  .file-box.has-file .btn-remove { display: inline-block; }
+  .btn-remove { display: none; }
+
+  .file-error {
+    margin: 8px 4px 0;
+    min-height: 18px;
+    font-size: 13px;
+    color: var(--error);
+  }
+
+  .actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 16px;
+    padding-right: 2px;
+  }
+  .btn-submit {
+    width: 177px;
+    height: 50px;
+    font: inherit;
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    background: #111;
+    border: 0;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: background .15s, transform .05s;
+  }
+  .btn-submit:hover { background: #2b2b2b; }
+  .btn-submit:active { transform: scale(.98); }
+  .btn-submit:disabled { background: #9a9894; cursor: not-allowed; }
+
+  .toast {
+    position: fixed;
+    left: 50%;
+    bottom: 40px;
+    transform: translate(-50%, 20px);
+    padding: 14px 22px;
+    font-size: 15px;
+    color: #fff;
+    background: #111;
+    border-radius: 999px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .2s, transform .2s;
+  }
+  .toast.show { opacity: 1; transform: translate(-50%, 0); }
+
+  @media (max-width: 640px) {
+    .page { padding: 64px 20px 56px; }
+    h1 { font-size: 44px; margin-bottom: 36px; }
+    .file-box { flex-direction: column; align-items: stretch; }
+    .file-actions { justify-content: flex-end; }
+    .btn-submit { width: 100%; }
+  }
+</style>
+</head>
+<body>
+  <main class="page">
+    <h1>일반 문의</h1>
+
+    <form id="form" novalidate>
+      <div class="field">
+        <label class="field-label" for="title">제목</label>
+        <input class="input" id="title" name="title" type="text" placeholder="제목을 적어주세요." autocomplete="off">
+      </div>
+
+      <div class="field">
+        <label class="field-label" for="message">메시지</label>
+        <textarea class="textarea" id="message" name="message" placeholder="문의 내용을 적어주세요."></textarea>
+      </div>
+
+      <!-- 파일 미첨부: .file-box / 파일 첨부됨: .file-box.has-file -->
+      <div class="file-box" id="fileBox">
+        <div class="file-info">
+          <p class="file-title state-empty">파일 첨부 없음</p>
+          <p class="file-title state-attached">파일 첨부됨</p>
+          <p class="file-desc state-empty">jpg, png, webp, svg, zip 파일을 첨부할 수 있어요.</p>
+          <p class="file-desc state-attached"><span class="name" id="fileName"></span>이 첨부됨</p>
+        </div>
+        <div class="file-actions">
+          <button type="button" class="btn-outline btn-remove" id="removeBtn">삭제</button>
+          <button type="button" class="btn-outline" id="attachBtn">파일 첨부</button>
+        </div>
+        <input class="file-input" id="file" name="file" type="file" accept=".jpg, .jpeg, .png, .webp, .svg, .zip">
+      </div>
+      <p class="file-error" id="fileError" role="alert"></p>
+
+      <div class="actions">
+        <button type="submit" class="btn-submit">문의 보내기</button>
+      </div>
+    </form>
+  </main>
+
+  <div class="toast" id="toast"></div>
+
+<script>
+  // ⚠️ 아래 URL을 본인의 Google Apps Script 웹 앱 URL로 교체하세요.
+  const GAS_WEB_APP_URL = "https://script.google.com/macros/s/AKfycbw0fuRXUfRdMntXpQKg9a4vKcGmCKsoxa_PAujGLzogDfY5EI-rHh3uHe8oNUJxL5hc/exec";
+
+  const ALLOWED = ['jpg', 'jpeg', 'png', 'webp', 'svg', 'zip'];
+  const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5MB
+  let selectedFile = null;
+
+  const form = document.getElementById('form');
+  const submitBtn = form.querySelector('.btn-submit');
+  const titleEl = document.getElementById('title');
+  const messageEl = document.getElementById('message');
+  const fileBox = document.getElementById('fileBox');
+  const fileInput = document.getElementById('file');
+  const fileName = document.getElementById('fileName');
+  const fileError = document.getElementById('fileError');
+  const attachBtn = document.getElementById('attachBtn');
+  const removeBtn = document.getElementById('removeBtn');
+  const toastEl = document.getElementById('toast');
+
+  function showToast(msg) {
+    toastEl.textContent = msg;
+    toastEl.classList.add('show');
+    clearTimeout(showToast.t);
+    showToast.t = setTimeout(() => toastEl.classList.remove('show'), 2400);
+  }
+
+  function isAllowed(file) {
+    const ext = file.name.split('.').pop().toLowerCase();
+    return ALLOWED.includes(ext);
+  }
+
+  function setFile(file) {
+    if (!file) { clearFile(); return; }
+    
+    // 1. 확장자 검사
+    if (!isAllowed(file)) {
+      fileError.textContent = '지원하지 않는 파일 형식이에요. (jpg, jpeg, png, webp, svg, zip)';
+      clearFile(true);
+      return;
+    }
+    
+    // 2. 용량 검사 (5MB 제한)
+    if (file.size > MAX_FILE_SIZE) {
+      alert('파일 크기는 최대 5MB까지 첨부 가능합니다.');
+      fileError.textContent = '파일 크기는 최대 5MB까지 첨부 가능해요.';
+      clearFile(true);
+      return;
+    }
+    selectedFile = file;
+    fileError.textContent = '';
+    fileName.textContent = file.name;
+    fileBox.classList.add('has-file');
+    attachBtn.textContent = '파일 변경';
+  }
+
+  function clearFile(keepError) {
+    fileInput.value = '';
+    selectedFile = null;
+    fileName.textContent = '';
+    fileBox.classList.remove('has-file');
+    attachBtn.textContent = '파일 첨부';
+    if (!keepError) fileError.textContent = '';
+  }
+
+  attachBtn.addEventListener('click', () => fileInput.click());
+  removeBtn.addEventListener('click', () => clearFile());
+  
+  // 파일 선택 이벤트
+  fileInput.addEventListener('change', function (e) {
+    const file = e.target.files[0];
+    if (!file) {
+      clearFile();
+      return;
+    }
+    // 확장자(허용 목록) · 용량(5MB) 검사는 setFile 내부에서 처리
+    if (!isAllowed(file)) {
+      alert('허용되지 않는 파일 형식입니다.\n(허용: jpg, jpeg, png, webp, svg, zip)');
+    }
+    setFile(file);
+  });
+
+  // Helper: 파일을 Base64 데이터 URL로 읽기
+  function convertFileToBase64(file) {
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.onload = () => resolve(reader.result);
+      reader.onerror = error => reject(error);
+      reader.readAsDataURL(file);
+    });
+  }
+
+  // 드래그 앤 드롭
+  ['dragenter', 'dragover'].forEach(ev =>
+    fileBox.addEventListener(ev, e => { e.preventDefault(); fileBox.classList.add('dragover'); }));
+  ['dragleave', 'drop'].forEach(ev =>
+    fileBox.addEventListener(ev, e => { e.preventDefault(); fileBox.classList.remove('dragover'); }));
+  fileBox.addEventListener('drop', e => {
+    const file = e.dataTransfer.files[0];
+    if (!file) return;
+    if (isAllowed(file)) {
+      const dt = new DataTransfer();
+      dt.items.add(file);
+      fileInput.files = dt.files;
+    }
+    setFile(file);
+  });
+
+  [titleEl, messageEl].forEach(el =>
+    el.addEventListener('input', () => el.classList.remove('invalid')));
+
+  // 폼 제출 이벤트
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    const subject = titleEl.value.trim();
+    const message = messageEl.value.trim();
+
+    titleEl.classList.toggle('invalid', !subject);
+    messageEl.classList.toggle('invalid', !message);
+    if (!subject || !message) {
+      alert('제목과 메시지를 모두 입력해주세요.');
+      (!subject ? titleEl : messageEl).focus();
+      return;
+    }
+
+    submitBtn.disabled = true;
+    submitBtn.innerText = '전송 중...';
+
+    let fileData = null;
+
+    // 파일 Base64 변환 (선택된 파일이 있는 경우)
+    if (selectedFile) {
+      try {
+        const base64Content = await convertFileToBase64(selectedFile);
+        fileData = {
+          base64: base64Content.split(',')[1], // data:...;base64, 이후의 순수 base64 데이터
+          mimeType: selectedFile.type,
+          name: selectedFile.name
+        };
+      } catch (err) {
+        alert('파일을 읽는 중 오류가 발생했습니다.');
+        submitBtn.disabled = false;
+        submitBtn.innerText = '문의 보내기';
+        return;
+      }
+    }
+
+    const payload = {
+      subject: subject,
+      message: message,
+      file: fileData
+    };
+
+    try {
+      // CORS 및 Google Apps Script 리다이렉트 대응을 위해 text/plain 전송 사용
+      const response = await fetch(GAS_WEB_APP_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+        body: JSON.stringify(payload)
+      });
+
+      const result = await response.json();
+
+      if (result.status === 'success') {
+        showToast('문의가 성공적으로 전송되었습니다.');
+        form.reset();
+        clearFile();
+      } else {
+        alert('전송 실패: ' + result.message);
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      alert('문의 전송 중 오류가 발생했습니다. 다시 시도해 주세요.');
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.innerText = '문의 보내기';
+    }
+  });
+</script>
+</body>
+</html>

@@ -114,8 +114,8 @@
   {
     "title": "수성구 상가 신축공사",
     "cover": "articles/civil-002.jpg",
-    "date": "2021-03-25T07:41:00.000Z",
-    "finished": 2021,
+    "date": "2021-10-25T07:41:00.000Z",
+    "finished": "2021.010 ~ 2022.03",
     "filename": "civil-002.json"
   },
   {
@@ -129,21 +129,21 @@
     "title": "노바엠 헬스케어 신축",
     "cover": "articles/civil-008.jpg",
     "date": "2020-03-25T07:40:00.000Z",
-    "finished": "2020.02.27. ~ 2020.04.14",
+    "finished": "2020.02.27. ~ 2020.12.14",
     "filename": "civil-008.json"
   },
   {
     "title": "동산글로벌 신축",
     "cover": "articles/civil-010.jpg",
-    "date": "2019-06-25T07:40:00.000Z",
-    "finished": "2019.06.27. ~ 2019.08.14",
+    "date": "2019-06-27T07:40:00.000Z",
+    "finished": "2019.06.27. ~ 2020.04.25",
     "filename": "civil-010.json"
   },
   {
     "title": "한주반도체 천안이전 신축",
     "cover": "articles/civil-009.jpg",
     "date": "2019-03-25T07:40:00.000Z",
-    "finished": "2019.02.27. ~ 2019.04.14",
+    "finished": "2019.02.27. ~ 2019.11.14",
     "filename": "civil-009.json"
   },
   {
